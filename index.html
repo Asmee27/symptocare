@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymptoCare 3.1 - AI-Powered Health Remedies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link rel="stylesheet" href="landing-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>SymptoCare 3.1</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="symptoms.html" class="nav-link">Symptoms</a></li>
+                <li><a href="remedies.html" class="nav-link">Remedies</a></li>
+                <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Welcome to SymptoCare 3.1</h1>
+                    <p class="hero-subtitle">AI-Powered Natural Health Remedies</p>
+                    <p class="hero-description">
+                        Get personalized remedy suggestions based on your symptoms using advanced AI technology. 
+                        Our intelligent system provides safe, natural remedies to help you feel better, backed by 
+                        traditional wisdom and modern research.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="symptoms.html" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                            Find Remedies Now
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Recent searches for returning users -->
+                    <div id="recentSearches" class="recent-searches-container" style="display: none;">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-illustration">
+                        <i class="fas fa-user-md"></i>
+                        <div class="floating-icons">
+                            <i class="fas fa-leaf"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-spa"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>How SymptoCare Works</h2>
+                <p class="section-subtitle">Your journey to natural wellness in 4 simple steps</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>1. Describe Symptoms</h3>
+                        <p>Tell us what you're experiencing using our intuitive form, AI chatbot, or quick symptom selector with autocomplete suggestions.</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Chat Assistant</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>2. AI Analysis</h3>
+                        <p>Our advanced AI analyzes your symptoms and matches them with appropriate natural remedies from our extensive database.</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-database"></i>
+                            <span>500+ Remedies</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>3. Get Personalized Remedies</h3>
+                        <p>Receive detailed, step-by-step instructions for natural remedies tailored to your specific symptoms and preferences.</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-user-check"></i>
+                            <span>Personalized</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>4. Track & Improve</h3>
+                        <p>Rate remedies, track your progress, and get better recommendations over time. Build your personal health journey.</p>
+                        <div class="feature-highlight">
+                            <i class="fas fa-history"></i>
+                            <span>Progress Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Users Helped</div>
+                        <div class="stat-description">People who found relief</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Natural Remedies</div>
+                        <div class="stat-description">Carefully curated solutions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                        <div class="stat-description">Users who would recommend</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">AI Available</div>
+                        <div class="stat-description">Always here to help</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The ginger tea remedy for nausea worked amazingly! I was skeptical at first, but it really helped during my morning sickness."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah M.</h4>
+                                <span>Expecting Mother</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I love how the AI chatbot understands my symptoms and gives personalized suggestions. It's like having a health assistant!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Mike R.</h4>
+                                <span>Software Developer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The peppermint oil remedy for headaches has become my go-to solution. Natural, effective, and no side effects!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Emma L.</h4>
+                                <span>Teacher</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-remedies">
+            <div class="container">
+                <h2>Popular Remedies This Week</h2>
+                <p class="section-subtitle">Discover what's helping others feel better</p>
+                <div class="popular-remedies-grid">
+                    <div class="popular-remedy-card">
+                        <div class="remedy-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <h3>Ginger Tea for Nausea</h3>
+                        <p>Natural digestive aid that soothes stomach upset</p>
+                        <div class="remedy-stats">
+                            <span class="rating">★★★★★ 4.5</span>
+                            <span class="usage">Used 203 times</span>
+                        </div>
+                        <a href="remedies.html" class="remedy-link">View Recipe <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="popular-remedy-card">
+                        <div class="remedy-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Peppermint Oil Massage</h3>
+                        <p>Effective headache relief through aromatherapy</p>
+                        <div class="remedy-stats">
+                            <span class="rating">★★★★☆ 4.2</span>
+                            <span class="usage">Used 156 times</span>
+                        </div>
+                        <a href="remedies.html" class="remedy-link">View Instructions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="popular-remedy-card">
+                        <div class="remedy-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h3>Lavender Sleep Aid</h3>
+                        <p>Calming aromatherapy for better sleep quality</p>
+                        <div class="remedy-stats">
+                            <span class="rating">★★★★★ 4.3</span>
+                            <span class="usage">Used 178 times</span>
+                        </div>
+                        <a href="remedies.html" class="remedy-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Natural Healing Journey?</h2>
+                    <p>Join thousands of users who have discovered the power of natural remedies with AI guidance</p>
+                    <div class="cta-buttons">
+                        <a href="symptoms.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-search"></i>
+                            Find My Remedies
+                        </a>
+                        <a href="login.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-user-plus"></i>
+                            Create Free Account
+                        </a>
+                    </div>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Natural Remedies</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>AI-Powered Suggestions</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Track Your Progress</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free to Use</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> SymptoCare 3.1</h3>
+                    <p>AI-powered health remedy suggestions for natural wellness. Empowering you to take control of your health naturally.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="symptoms.html">Find Symptoms</a></li>
+                        <li><a href="remedies.html">Browse Remedies</a></li>
+                        <li><a href="feedback.html">Share Feedback</a></li>
+                        <li><a href="login.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Health Blog</a></li>
+                        <li><a href="#">Remedy Database</a></li>
+                        <li><a href="#">Safety Guidelines</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Notice</h4>
+                    <p><small>This application provides general wellness suggestions and is not a substitute for professional medical advice. Always consult healthcare professionals for serious conditions.</small></p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Medical Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SymptoCare 3.1. All rights reserved. Made with ❤️ for natural wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

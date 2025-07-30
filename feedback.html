@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Feedback - SymptoCare 3.1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>SymptoCare 3.1</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="symptoms.html" class="nav-link">Symptoms</a></li>
+                <li><a href="remedies.html" class="nav-link">Remedies</a></li>
+                <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="feedback-page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-comments"></i> Share Your Feedback</h1>
+                <p>Help us improve SymptoCare by sharing your experience with our remedies and platform</p>
+            </div>
+
+            <div class="feedback-container">
+                <div class="feedback-tabs">
+                    <button class="tab-button active" onclick="switchTab('remedy-feedback')">
+                        <i class="fas fa-star"></i> Rate a Remedy
+                    </button>
+                    <button class="tab-button" onclick="switchTab('report-issue')">
+                        <i class="fas fa-exclamation-triangle"></i> Report Issue
+                    </button>
+                    <button class="tab-button" onclick="switchTab('general-feedback')">
+                        <i class="fas fa-comment-alt"></i> General Feedback
+                    </button>
+                </div>
+
+                <!-- Remedy Feedback Tab -->
+                <div id="remedy-feedback" class="tab-content active">
+                    <form id="remedyFeedbackForm" class="feedback-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-pills"></i> Which remedy did you try?</h3>
+                            <div class="form-group">
+                                <select id="remedySelect" required>
+                                    <option value="">Select a remedy</option>
+                                    <option value="ginger-tea">Ginger Tea for Nausea</option>
+                                    <option value="peppermint-oil">Peppermint Oil Massage</option>
+                                    <option value="honey-lemon">Honey & Lemon Gargle</option>
+                                    <option value="chamomile-tea">Chamomile Tea</option>
+                                    <option value="lavender-aromatherapy">Lavender Aromatherapy</option>
+                                    <option value="salt-water-gargle">Salt Water Gargle</option>
+                                    <option value="cold-compress">Cold Compress Therapy</option>
+                                    <option value="steam-inhalation">Steam Inhalation</option>
+                                    <option value="epsom-salt-bath">Epsom Salt Bath</option>
+                                    <option value="breathing-exercise">Deep Breathing Exercise</option>
+                                </select>
+                                <div id="remedySelectError" class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-star"></i> Rate Your Experience</h3>
+                            <div class="rating-group">
+                                <label>How effective was this remedy?</label>
+                                <div id="effectivenessRating" class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">Click to rate</span>
+                            </div>
+
+                            <div class="rating-group">
+                                <label>How easy was it to follow the instructions?</label>
+                                <div id="easeRating" class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">Click to rate</span>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-comment"></i> Additional Comments</h3>
+                            <div class="form-group">
+                                <textarea 
+                                    id="remedyComments" 
+                                    placeholder="Tell us more about your experience with this remedy..."
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="wouldRecommend">
+                                    <span class="checkmark"></span>
+                                    I would recommend this remedy to others
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit Feedback
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Report Issue Tab -->
+                <div id="report-issue" class="tab-content">
+                    <form id="reportIssueForm" class="feedback-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-bug"></i> What type of issue are you reporting?</h3>
+                            <div class="form-group">
+                                <select id="issueType" required>
+                                    <option value="">Select issue type</option>
+                                    <option value="incorrect-remedy">Incorrect remedy suggestion</option>
+                                    <option value="safety-concern">Safety concern with remedy</option>
+                                    <option value="technical-problem">Technical problem with website</option>
+                                    <option value="missing-information">Missing information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div id="issueTypeError" class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-info-circle"></i> Issue Details</h3>
+                            <div class="form-group">
+                                <label for="issueDescription">Please describe the issue in detail:</label>
+                                <textarea 
+                                    id="issueDescription" 
+                                    placeholder="Provide as much detail as possible about the issue you encountered..."
+                                    rows="5"
+                                    required
+                                ></textarea>
+                                <div id="issueDescriptionError" class="error-message"></div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="symptomsReported">What symptoms did you report?</label>
+                                    <input type="text" id="symptomsReported" placeholder="e.g., headache, nausea">
+                                </div>
+                                <div class="form-group">
+                                    <label for="remedySuggested">Which remedy was suggested?</label>
+                                    <input type="text" id="remedySuggested" placeholder="e.g., Ginger Tea">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="urgentIssue">
+                                    <span class="checkmark"></span>
+                                    This is an urgent safety concern
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-exclamation-triangle"></i> Report Issue
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- General Feedback Tab -->
+                <div id="general-feedback" class="tab-content">
+                    <form id="generalFeedbackForm" class="feedback-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-heart"></i> Overall Experience</h3>
+                            <div class="rating-group">
+                                <label>How would you rate SymptoCare overall?</label>
+                                <div id="overallRating" class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">Click to rate</span>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-thumbs-up"></i> What do you like most?</h3>
+                            <div class="form-group">
+                                <select id="favoriteFeature">
+                                    <option value="">Select your favorite feature</option>
+                                    <option value="ai-chatbot">AI Chatbot Assistant</option>
+                                    <option value="remedy-database">Comprehensive Remedy Database</option>
+                                    <option value="symptom-input">Easy Symptom Input</option>
+                                    <option value="personalized-suggestions">Personalized Suggestions</option>
+                                    <option value="user-interface">User-Friendly Interface</option>
+                                    <option value="safety-information">Safety Information</option>
+                                    <option value="progress-tracking">Progress Tracking</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-lightbulb"></i> Suggestions for Improvement</h3>
+                            <div class="form-group">
+                                <label for="improvements">What could we improve?</label>
+                                <textarea 
+                                    id="improvements" 
+                                    placeholder="Share your ideas for making SymptoCare better..."
+                                    rows="4"
+                                ></textarea>
+                                <div id="improvementsError" class="error-message"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newFeatures">What new features would you like to see?</label>
+                                <textarea 
+                                    id="newFeatures" 
+                                    placeholder="Tell us about features you'd love to have..."
+                                    rows="4"
+                                ></textarea>
+                                <div id="newFeaturesError" class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="recommendApp">
+                                    <span class="checkmark"></span>
+                                    I would recommend SymptoCare to friends and family
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-heart"></i> Submit Feedback
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="feedbackSuccess" class="feedback-success" style="display: none;">
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Thank You!</h2>
+                    <p>Your feedback has been submitted successfully. We appreciate you taking the time to help us improve SymptoCare.</p>
+                    <div class="success-actions">
+                        <button class="btn btn-primary" onclick="resetFeedbackForm()">
+                            <i class="fas fa-plus"></i> Submit More Feedback
+                        </button>
+                        <a href="index.html" class="btn btn-secondary">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> SymptoCare 3.1</h3>
+                    <p>AI-powered health remedy suggestions for natural wellness.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="symptoms.html">Find Symptoms</a></li>
+                        <li><a href="remedies.html">Browse Remedies</a></li>
+                        <li><a href="feedback.html">Share Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Notice</h4>
+                    <p><small>This application provides general wellness suggestions and is not a substitute for professional medical advice.</small></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SymptoCare 3.1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

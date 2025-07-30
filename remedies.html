@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Remedies - SymptoCare 3.1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>SymptoCare 3.1</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="symptoms.html" class="nav-link">Symptoms</a></li>
+                <li><a href="remedies.html" class="nav-link active">Remedies</a></li>
+                <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="remedies-page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-leaf"></i> Natural Remedies</h1>
+                <p>Discover safe, effective natural remedies for your symptoms</p>
+                
+                <div class="symptoms-summary">
+                    <h3>Your Symptoms:</h3>
+                    <div id="symptomsDisplay" class="symptoms-display">
+                        <p style="color: #666; font-style: italic;">Browse our popular remedies below or <a href="symptoms.html">add your symptoms</a> for personalized suggestions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default remedies container will be created by JavaScript -->
+            
+            <!-- Personalized remedies container will be created by JavaScript -->
+
+            <div id="noRemedies" class="no-remedies" style="display: none;">
+                <div class="no-remedies-content">
+                    <i class="fas fa-search"></i>
+                    <h3>No specific remedies found</h3>
+                    <p>We couldn't find remedies for your specific symptoms, but you can browse our popular remedies above or try different symptom combinations.</p>
+                    <a href="symptoms.html" class="btn btn-primary">
+                        <i class="fas fa-edit"></i> Try Different Symptoms
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> SymptoCare 3.1</h3>
+                    <p>AI-powered health remedy suggestions for natural wellness.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="symptoms.html">Find Symptoms</a></li>
+                        <li><a href="remedies.html">Browse Remedies</a></li>
+                        <li><a href="feedback.html">Share Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Notice</h4>
+                    <p><small>This application provides general wellness suggestions and is not a substitute for professional medical advice.</small></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SymptoCare 3.1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
