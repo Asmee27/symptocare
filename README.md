@@ -16,11 +16,6 @@ Your project is live at:
 
 **[https://vercel.com/asmeejs-projects/v0-sympto-care-ui-design](https://vercel.com/asmeejs-projects/v0-sympto-care-ui-design)**
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/6b0c1oNQ2Rr](https://v0.dev/chat/projects/6b0c1oNQ2Rr)**
 
 ## How It Works
 
