@@ -13,8 +13,11 @@ SymptoCare is a simple and intelligent web application that helps users understa
 Features:
 
 Easy symptom selection
+
 Smart condition prediction
+
 Suggested precautions
+
 Clean, responsive UI
 ## Deployment
 
